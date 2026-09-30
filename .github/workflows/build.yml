@@ -1,5 +1,10 @@
 name: Build REST API
 
+uses: actions/setup-go@v6
+with:
+  go-version-file: 'go.mod'
+  cache: true
+
 on:
   push:
     branches: [ master ]
