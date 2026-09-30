@@ -46,7 +46,7 @@ jobs:
             go build -ldflags="-s -w" -o bin/server-windows-amd64.exe ./cmd/api
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: rest-api-binaries
           path: bin/
