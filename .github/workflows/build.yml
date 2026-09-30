@@ -38,12 +38,12 @@ jobs:
         run: |
           mkdir -p bin
           CGO_ENABLED=0 GOOS=linux GOARCH=amd64 \
-            go build -ldflags="-s -w" -o bin/server-linux-amd64 ./cmd/server
+            go build -ldflags="-s -w" -o bin/server-linux-amd64 ./cmd/api
 
       - name: Build binary (Windows)
         run: |
           CGO_ENABLED=0 GOOS=windows GOARCH=amd64 \
-            go build -ldflags="-s -w" -o bin/server-windows-amd64.exe ./cmd/server
+            go build -ldflags="-s -w" -o bin/server-windows-amd64.exe ./cmd/api
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
